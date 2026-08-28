@@ -22,9 +22,11 @@ function exibirFrase() {
     elemento.textContent = obterFraseAleatoria(frases);
 }
 
-const botao = document.getElementById("botao");
+if (typeof document !== "undefined") {
+    const botao = document.getElementById("botao");
 
-botao.addEventListener("click", exibirFrase);
+    botao.addEventListener("click", exibirFrase);
+}
 
 if (typeof module !== "undefined") {
     module.exports = {
